@@ -1,0 +1,120 @@
+.nav-main {
+    width: 100%;
+    height: 84px;
+    background: #F5F7FA;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo-layout {
+    display: flex;
+    width: Hug (154.49px)px;
+    height: Hug (24px)px;
+    top: 30px;
+    left: 105px;
+    gap: 8px;
+    opacity: 0px;
+    position: sticky;
+}
+
+.icon {
+    width: 35px;
+    height: 20.66px;
+    top: 0.91px;
+    left: 7.37px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.logo {
+    width: 111.49px;
+    height: 20.66px;
+    gap: 0px;
+    opacity: 0px;
+    color: #263238;
+    ;
+}
+
+.navitems {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 588px;
+    height: 24px;
+    top: 30px;
+    left: 425.5px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.navitem {
+    width: Hug (46px)px;
+    height: Hug (24px)px;
+    gap: 50px;
+    opacity: 0px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: space-between;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #18191F;
+}
+
+.navbuttons {
+    display: flex;
+    align-items: center;
+    width: Hug (182px)px;
+    height: Hug (40px)px;
+    top: 22px;
+    right: 105px;
+    gap: 14px;
+    opacity: 0px;
+    position: sticky;
+}
+
+.navbutton1 {
+    width: Hug (77px)px;
+    height: Hug (40px)px;
+    padding: 10px 20px 10px 20px;
+    gap: 10px;
+    border-radius: 6px 0px 0px 0px;
+    opacity: 0px;
+    background: #F5F7FA;
+    color: #4CAF4F;
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    border: none;
+
+}
+
+.navbutton2 {
+    width: Hug (91px)px;
+    height: Hug (40px)px;
+    padding: 10px 20px 10px 20px;
+    gap: 10px;
+    border-radius: 6px 0px 0px 0px;
+    opacity: 0px;
+    background: #4CAF4F;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    border: none;
+}
+

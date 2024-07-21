@@ -1,0 +1,129 @@
+.footermain {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100vw;
+}
+.footer {
+    display: flex;
+    padding: 64px 165px;
+    align-items: flex-start;
+    gap: 125px;
+    background: var(--Neutral-Black, #263238);
+    width: 100%;
+}
+.footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.f1text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.f1t1 {
+    width: 350px;
+    color: var(--Neutral-Silver, #F5F7FA);
+    /* Body/Regular/Body 3 */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0px;
+    /* 142.857% */
+}
+
+.sociallink {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.footer2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.colheader {
+    width: 160px;
+    color: var(--Neutral-White, #FFF);
+    /* Heading/Headline 4 */
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    /* 140% */
+}
+
+.collinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    list-style-type: none;
+    margin: 0;
+    /* Removes the default margin */
+    padding: 0;
+}
+
+.collink {
+    width: 160px;
+    color: var(--Neutral-Silver, #F5F7FA);
+    /* Body/Regular/Body 3 */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+}
+
+.colinput {
+    width: 255px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    opacity: 0.2;
+    background: var(--Default-White, #FFF);
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.colinput {
+    padding-right: 30px;
+    /* Add padding to the right to avoid text overlap with the icon */
+}
+
+.colinput::placeholder {
+    color: var(--Text-Gray-300, #151a29);
+    /* Change this to your desired color */
+    opacity: 1;
+    /* Ensures the custom color is applied in all browsers */
+}
+
+.input-icon {
+    position: absolute;
+    right: 10px;
+    /* Adjust the value to position the icon correctly */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Makes sure the icon does not block the input field */
+}
