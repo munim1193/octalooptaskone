@@ -1,7 +1,7 @@
 .calender {
     display: flex;
     align-items: flex-start;
-    width: 1440px;
+    width: 100%;
     padding: 0px 144px;
     justify-content: space-between;
     align-items: center;

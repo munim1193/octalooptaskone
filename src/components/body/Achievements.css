@@ -1,7 +1,7 @@
 .achievements {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
     padding: 64px 144px;
     justify-content: space-between;
     align-items: center;

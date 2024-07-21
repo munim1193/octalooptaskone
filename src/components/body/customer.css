@@ -1,13 +1,13 @@
 .customer {
     display: flex;
-    width: 1440px;
+    width: 100%;
     padding: 32px 144px;
     align-items: center;
     gap: 78px;
     background: var(--Neutral-Silver, #F5F7FA);
 }
 
-custimg {
+.custimg {
     width: 326px;
     height: 326px;
     flex-shrink: 0;
