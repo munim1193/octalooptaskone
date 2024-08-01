@@ -1,13 +1,15 @@
-
+/* General styles for the main container */
 .maincom {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the main container */
-    max-width: 100%; /* Ensure the width does not exceed 1440px */
     margin: 0 auto; /* Center the container horizontally */
     gap: 16px;
+    width: 100%;
+    padding: 0px 144px; /* Ensure maincom takes full width of parent */
 }
 
+/* Styles for the header section */
 .comone {
     display: flex;
     width: 100%; /* Adjust to 100% of the parent container */
@@ -16,94 +18,146 @@
     gap: 8px;
 }
 
+/* Styles for the primary text */
 .comtext1 {
-    width: 542px;
+    width: 90%; /* Adjust to 90% for better responsiveness */
+    max-width: 542px; /* Maintain a max width */
     color: var(--Neutral-D_Grey, #4D4D4D);
     text-align: center;
-    /* Heading/Headline 2 */
     font-family: Inter;
     font-size: 36px;
-    font-style: normal;
     font-weight: 600;
     line-height: 44px;
-    /* 122.222% */
 }
 
+/* Styles for the secondary text */
 .comtext2 {
-    width: 100%; /* Ensure it stretches within its container */
+    width: 90%; /* Adjust to 90% for better responsiveness */
     color: var(--Neutral-Grey, #717171);
     text-align: center;
-    /* Body/Regular/Body 2 */
     font-family: Inter;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    /* 150% */
 }
 
+/* Styles for the main content section */
 .comtwo {
     display: flex;
     width: 100%; /* Adjust to 100% of the parent container */
     padding: 0 24px; /* Reduce padding to ensure boxes fit better */
-    justify-content: space-between;
+    justify-content: space-between; /* Ensure boxes are spaced out evenly */
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
+/* General styles for the content boxes */
 .comframe1, .comframe2, .comframe3 {
     display: flex;
-    width: 299px;
+    width: 100%;
+    max-width: 299px;
     padding: 24px 32px;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    flex-shrink: 0;
     border-radius: 8px;
     background: var(--Neutral-White, #FFF);
     box-shadow: 0px 2px 4px 0px rgba(171, 190, 209, 0.20);
+    margin-bottom: 16px; /* Add margin for spacing between rows */
 }
 
-.frame {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
-
+/* Styles for the content within the boxes */
 .framecon {
-    width: 251px;
+    width: 90%; /* Adjust to 90% for better responsiveness */
+    max-width: 251px;
     color: var(--Neutral-Grey, #717171);
     text-align: center;
-    /* Body/Regular/Body 3 */
     font-family: Inter;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    /* 142.857% */
 }
 
+/* Styles for the member text */
 .membertext {
-    width: 100%; /* Ensure it stretches within its container */
+    width: 90%; /* Adjust to 90% for better responsiveness */
+    max-width: 100%;
     color: var(--Neutral-D_Grey, #4D4D4D);
     text-align: center;
-    /* Heading/Headline 3 */
     font-family: Inter;
     font-size: 28px;
-    font-style: normal;
     font-weight: 700;
     line-height: 36px;
-    /* 128.571% */
 }
 
+/* Styles for the member icons */
 .Iconmember {
     width: 65px;
     height: 56px;
 }
 
+/* Styles for the member box */
 .memberbox {
     display: flex;
-    width: 267px;
+    width: 90%; /* Adjust to 90% for better responsiveness */
+    max-width: 267px;
     flex-direction: column;
     align-items: center;
     gap: 16px;
+}
+
+/* Media Queries */
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+    .comtwo {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .comframe1, .comframe2, .comframe3 {
+        width: 299px;
+    }
+}
+
+/* For smaller screens (mobile) */
+@media (max-width: 767px) {
+    .maincom{
+        padding: 0px 20px;
+    }
+    .comtext1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .comtext2 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .comtwo {
+        flex-direction: column;
+        padding: 0 16px; /* Reduce padding for smaller screens */
+    }
+
+    .comframe1, .comframe2, .comframe3 {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 16px; /* Add margin for spacing between rows */
+    }
+
+    .framecon {
+        width: 100%;
+        max-width: none;
+    }
+
+    .membertext {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .memberbox {
+        width: 100%;
+        max-width: none;
+    }
 }

@@ -1,82 +1,125 @@
+/* General styles for the hero section */
 .herosection {
     display: flex;
     padding: 96px 144px;
     align-items: center;
     gap: 104px;
-    align-self: stretch;
     background: var(--Neutral-Silver, #F5F7FA);
+    width: 100%;
 }
 
+/* Styles for the left section of the hero */
 .herosection1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
-    flex: 1 0 0;
+    flex: 1;
 }
 
+/* Styles for the right section (image) of the hero */
 .herosection2 {
     width: 391px;
-    height: 407px;
+    height: auto;
 }
 
+.herosection2 img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensure the image scales down properly */
+}
+
+/* Styles for the text container */
 .herotext {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    align-self: stretch;
+    width: 100%;
 }
 
+/* Styles for the main headline */
 .herotext1 {
-    align-self: stretch;
+    width: 100%;
     color: var(--Neutral-D_Grey, #4D4D4D);
-    /* Heading/Headline 1 */
     font-family: Inter;
     font-size: 64px;
-    font-style: normal;
     font-weight: 600;
     line-height: 76px;
-    /* 118.75% */
 }
 
+/* Styles for the highlighted part of the headline */
 .herotext11 {
     color: var(--Brand-Primary, #4CAF4F);
-    /* Heading/Headline 1 */
     font-family: Inter;
     font-size: 64px;
-    font-style: normal;
     font-weight: 600;
     line-height: 76px;
 }
 
+/* Styles for the subheadline */
 .herotext2 {
-    align-self: stretch;
+    width: 100%;
     color: var(--Neutral-Grey, #717171);
-    /* Body/Regular/Body 2 */
     font-family: Inter;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    /* 150% */
 }
 
+/* Styles for the button */
 .herobutton {
     display: flex;
     padding: 14px 32px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     border-radius: 4px;
     background: var(--Brand-Primary, #4CAF4F);
     color: var(--Neutral-White, #FFF);
     text-align: center;
-    /* Body/Medium/Body 2 */
     font-family: Inter;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
     line-height: 24px;
-    /* 150% */
+    border: none; /* Reset any default button styles */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Media Queries */
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+    .herosection {
+        padding: 72px 96px;
+    }
+}
+
+/* For smaller screens (mobile) */
+@media (max-width: 767px) {
+    .herosection {
+        flex-direction: column;
+        padding: 48px 24px;
+        gap: 32px;
+    }
+
+    .herotext1, .herotext11 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .herotext2 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .herosection2 {
+        width: 100%;
+        height: auto;
+        max-width: 300px; /* Adjust based on the image size */
+    }
+
+    .herobutton {
+        width: 100%;
+        max-width: 200px; /* Ensure button doesn't stretch too wide */
+    }
 }

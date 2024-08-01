@@ -1,86 +1,142 @@
+/* Base Styles */
 .unlockmain {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Padding for all screen sizes */
 }
 
 .unlock {
     display: flex;
-    width: 80%;
-    padding: 0px 144px;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px; /* Padding for all screen sizes */
+    gap: 32px; /* Space between child elements */
 }
 
 .unlock1 {
     display: flex;
-    width: 442px;
-    height: 433px;
-    padding: 52px 0.467px 52.005px 0px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
+    justify-content: center; /* Center image horizontally */
+    align-items: center;     /* Center image vertically */
+    width: 100%;
+    max-width: 442px;        /* Limit max width */
+    margin: 0 auto;          /* Center the container itself */
+}
+
+.unlock11 {
+    max-width: 100%; /* Ensure image scales properly */
+    height: auto;    /* Maintain aspect ratio */
 }
 
 .unlock2 {
     display: flex;
-    width: 661px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 661px; /* Limit max width */
+    gap: 32px; /* Space between child elements */
 }
 
 .unlock21 {
     display: flex;
-    width: 601px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    align-items: center;
+    width: 100%;
+    max-width: 601px; /* Limit max width */
+    gap: 16px; /* Space between text elements */
 }
 
 .unlock211 {
-    align-self: stretch;
     color: var(--Neutral-D_Grey, #4D4D4D);
-    /* Heading/Headline 2 */
     font-family: Inter;
     font-size: 36px;
-    font-style: normal;
     font-weight: 600;
     line-height: 44px;
-    /* 122.222% */
+    text-align: center; /* Center text */
 }
 
 .unlock212 {
-    align-self: stretch;
     color: var(--Neutral-Grey, #717171);
-    /* Body/Regular/Body 3 */
     font-family: Inter;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    /* 142.857% */
+    text-align: center; /* Center text */
 }
 
 .unlock22 {
-    display: flex;
     padding: 14px 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     border-radius: 4px;
     background: var(--Brand-Primary, #4CAF4F);
     border: none;
     color: white;
-}
-
-.unlock2 {
-    text-align: center;
-    /* Body/Medium/Body 2 */
     font-family: Inter;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
     line-height: 24px;
-    /* 150% */
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+    .unlock {
+        flex-direction: row;
+        padding: 0 64px; /* Adjust padding for medium screens */
+    }
+
+    .unlock1 {
+        max-width: 442px; /* Maintain max width */
+    }
+
+    .unlock2 {
+        max-width: 661px; /* Maintain max width */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+    .unlock {
+        flex-direction: column;
+        padding: 0 20px; /* Reduced padding for smaller screens */
+    }
+    
+    .unlock1 {
+        width: 100%;
+        margin: 0 auto; /* Center the container */
+    }
+
+    .unlock11 {
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .unlock2 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .unlock21 {
+        width: 100%;
+        max-width: 100%;
+        text-align: center; /* Center text */
+    }
+
+    .unlock211 {
+        font-size: 28px; /* Reduced font size for smaller screens */
+        line-height: 36px;
+    }
+
+    .unlock212 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .unlock22 {
+        padding: 12px 24px; /* Adjust padding for smaller buttons */
+        font-size: 14px; /* Reduced font size for smaller screens */
+    }
 }

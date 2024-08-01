@@ -1,22 +1,35 @@
+/* styles.css */
+
+/* Base styles for larger screens */
 .footermain {
     display: inline-flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    /* Ensure space between footermain content */
 }
+
 .footer {
     display: flex;
-    padding: 64px 165px;
-    align-items: flex-start;
-    gap: 125px;
+    justify-content: space-between;
+    padding: 64px 144px;
+    /* Adjust padding as needed */
+    align-items: center;
+    gap: 20px;
     background: var(--Neutral-Black, #263238);
     width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line on smaller screens */
 }
+
 .footer1 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
+    align-items: start;
+    gap: 50px;
 }
 
 .f1text {
@@ -27,78 +40,96 @@
 }
 
 .f1t1 {
-    width: 350px;
+    width: 100%;
+    /* Adjust width as needed */
+    max-width: 350px;
+    /* Set maximum width if necessary */
     color: var(--Neutral-Silver, #F5F7FA);
-    /* Body/Regular/Body 3 */
     font-family: Inter;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 0px;
-    /* 142.857% */
+    line-height: 20px;
+    /* Adjust line height as needed */
+    text-align: start;
+    /* Center align text */
 }
 
 .sociallink {
     display: flex;
-    align-items: flex-start;
+    align-items: start;
     gap: 16px;
 }
 
 .footer2 {
     display: flex;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 30px;
+    gap: 20px;
 }
 
 .col {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
+    align-items: start;
+    gap: 20px;
 }
 
 .colheader {
-    width: 160px;
+    width: 100%;
+    /* Adjust width as needed */
+    max-width: 160px;
+    /* Set maximum width if necessary */
     color: var(--Neutral-White, #FFF);
-    /* Heading/Headline 4 */
     font-family: Inter;
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
     line-height: 28px;
-    /* 140% */
+    text-align: start;
+    /* Center align text */
 }
 
 .collinks {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: start;
     gap: 12px;
     list-style-type: none;
     margin: 0;
-    /* Removes the default margin */
     padding: 0;
 }
 
 .collink {
-    width: 160px;
+    width: 100%;
+    /* Adjust width as needed */
+    max-width: 160px;
+    /* Set maximum width if necessary */
     color: var(--Neutral-Silver, #F5F7FA);
-    /* Body/Regular/Body 3 */
     font-family: Inter;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    /* 142.857% */
+    text-align: center;
+    /* Center align text */
 }
 
 .colinput {
-    width: 255px;
+    width: 100%;
+    /* Adjust width as needed */
+    max-width: 255px;
+    /* Set maximum width if necessary */
     height: 40px;
     flex-shrink: 0;
     border-radius: 8px;
     opacity: 0.2;
     background: var(--Default-White, #FFF);
+    padding-right: 30px;
+    /* Add padding to the right */
+    box-sizing: border-box;
+}
+
+.colinput::placeholder {
+    color: var(--Text-Gray-300, #151a29);
+    opacity: 1;
 }
 
 .input-container {
@@ -106,24 +137,53 @@
     display: inline-block;
 }
 
-.colinput {
-    padding-right: 30px;
-    /* Add padding to the right to avoid text overlap with the icon */
-}
-
-.colinput::placeholder {
-    color: var(--Text-Gray-300, #151a29);
-    /* Change this to your desired color */
-    opacity: 1;
-    /* Ensures the custom color is applied in all browsers */
-}
-
 .input-icon {
     position: absolute;
     right: 10px;
-    /* Adjust the value to position the icon correctly */
+    /* Adjust icon position */
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
-    /* Makes sure the icon does not block the input field */
+}
+
+/* Media query for phones */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 64px 20px;
+        /* Adjust padding for phones */
+        justify-content: center;
+    }
+
+    .footer2 {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center align items */
+        text-align: center;
+        /* Center align text content */
+    }
+
+    .colheader,
+    .collink,
+    .colinput {
+        width: 100%;
+        /* Expand elements to full width */
+        max-width: none;
+        /* Remove max-width */
+        text-align: center;
+        /* Center align text */
+    }
+
+    .colheader {
+
+        text-align: center;
+        /* Center align text */
+    }
+
+    .collinks {
+
+        align-items: center;
+
+    }
+
 }

@@ -6,7 +6,7 @@ const Unlock = () => {
     <div className='unlockmain'>
       <div className='unlock'>
         <div className='unlock1'>
-          <img alt='unlock' src={unlock} />
+          <img alt='unlock' src={unlock} className='unlock11'/>
         </div>
         <div className='unlock2'>
           <div className='unlock21'>

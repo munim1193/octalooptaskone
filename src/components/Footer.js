@@ -8,8 +8,8 @@ const Footer = () => {
         <div className='footer1'>
           <img alt='logofooter' src={logofooter} />
           <div className='f1text'>
-            <p className='f1t1'>Copyright © 2020 Nexcent ltd.</p>
-            <p className='f1t1'>All rights reserved</p>
+            <div className='f1t1'>Copyright © 2020 Nexcent ltd.</div>
+            <div className='f1t1'>All rights reserved</div>
           </div>
           <div className='sociallink'>
             <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">

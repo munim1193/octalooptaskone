@@ -6,7 +6,7 @@ const HeroSection = () => {
     <div className='herosection'>
       <div className='herosection1'>
         <div className='herotext'>
-          <div className='herotext1'>Lessons and insights <span className='herotext11'>from 8 years</span></div>
+          <div className='herotext1'>Lessons and insights <br/><span className='herotext11'>from 8 years</span></div>
           <div className='herotext2'>Where to grow your business as a photographer: site or social media?</div>
         </div>
         <buton className='herobutton'>Register</buton>

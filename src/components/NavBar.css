@@ -1,3 +1,5 @@
+/* NavBar.css */
+
 .nav-main {
     width: 100%;
     height: 84px;
@@ -5,116 +7,145 @@
     color: black;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    text-align: center;
     justify-content: space-between;
     position: relative;
-}
-
-.logo-layout {
-    display: flex;
-    width: Hug (154.49px)px;
-    height: Hug (24px)px;
-    top: 30px;
-    left: 105px;
-    gap: 8px;
-    opacity: 0px;
-    position: sticky;
-}
-
-.icon {
-    width: 35px;
-    height: 20.66px;
-    top: 0.91px;
-    left: 7.37px;
-    gap: 0px;
-    opacity: 0px;
-}
-
-.logo {
-    width: 111.49px;
-    height: 20.66px;
-    gap: 0px;
-    opacity: 0px;
-    color: #263238;
-    ;
-}
-
-.navitems {
+    padding: 0 100px;
+  }
+  
+  .logo-layout {
     display: flex;
     align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    width: 588px;
-    height: 24px;
-    top: 30px;
-    left: 425.5px;
-    gap: 0px;
-    opacity: 0px;
-}
-
-.navitem {
-    width: Hug (46px)px;
-    height: Hug (24px)px;
+    gap: 8px;
+  }
+  
+  .icon {
+    width: 35px;
+    height: auto; /* Adjust height as needed */
+  }
+  
+  .logo {
+    width: 111.49px;
+    height: auto; /* Adjust height as needed */
+    color: #263238;
+  }
+  
+  .navitems {
+    display: flex;
+    align-items: center;
     gap: 50px;
-    opacity: 0px;
+  }
+  
+  .navitem {
     text-decoration: none;
-    text-align: center;
-    justify-content: space-between;
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    text-align: left;
     color: #18191F;
-}
-
-.navbuttons {
+  }
+  
+  .navbuttons {
     display: flex;
     align-items: center;
-    width: Hug (182px)px;
-    height: Hug (40px)px;
-    top: 22px;
-    right: 105px;
     gap: 14px;
-    opacity: 0px;
-    position: sticky;
-}
-
-.navbutton1 {
-    width: Hug (77px)px;
-    height: Hug (40px)px;
-    padding: 10px 20px 10px 20px;
-    gap: 10px;
-    border-radius: 6px 0px 0px 0px;
-    opacity: 0px;
+  }
+  
+  .navbutton1,
+  .navbutton2 {
+    min-width: 80px; /* Adjust width as needed */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    border: none;
+  }
+  
+  .navbutton1 {
     background: #F5F7FA;
     color: #4CAF4F;
-    border-radius: 5px;
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    text-align: center;
-    border: none;
-
-}
-
-.navbutton2 {
-    width: Hug (91px)px;
-    height: Hug (40px)px;
-    padding: 10px 20px 10px 20px;
-    gap: 10px;
-    border-radius: 6px 0px 0px 0px;
-    opacity: 0px;
+  }
+  
+  .navbutton2 {
     background: #4CAF4F;
     color: #FFFFFF;
-    border-radius: 5px;
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
+  }
+  
+  /* Burger menu styles */
+  .burger-menu {
+    display: none; /* Hide burger menu by default */
+    cursor: pointer;
+  }
+  
+  .burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #18191F;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .burger-menu.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .burger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-menu.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Mobile menu styles */
+  .mobile-menu {
+    position: absolute;
+    top: 84px; /* Adjust according to your NavBar height */
+    left: 0;
+    width: 100%;
+    background-color: #F5F7FA;
+    display: none; /* Hide mobile menu by default */
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mobile-menu.open {
+    display: flex; /* Show mobile menu when open */
+  }
+  
+  .navitem {
+    width: 100%; /* Full width for mobile nav items */
+    padding: 12px 0; /* Adjust padding as needed */
     text-align: center;
-    border: none;
-}
-
+  }
+  
+  .navbutton1,
+  .navbutton2 {
+    width: 100%; /* Full width for mobile buttons */
+    padding: 12px 0; /* Adjust padding as needed */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-main {
+        
+        padding: 0 10px;
+      }
+    .navitems {
+      display: none; /* Hide navitems for mobile screens */
+    }
+  
+    .navbuttons {
+      display: none; /* Hide navbuttons for mobile screens */
+    }
+  
+    .burger-menu {
+      display: block; /* Show burger menu for mobile screens */
+    }
+  
+    .mobile-menu.open {
+      padding-top: 20px; /* Add padding for better appearance */
+    }
+  }
+  

@@ -1,18 +1,22 @@
 .customer {
     display: flex;
-    width: 100%;
-    padding: 32px 144px;
+    flex-direction: column; /* Default to column layout */
+    justify-content: center;
     align-items: center;
-    gap: 78px;
+    padding: 32px 20px;
+    gap: 32px; /* Reduce gap for smaller screens */
     background: var(--Neutral-Silver, #F5F7FA);
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .custimg {
-    width: 326px;
-    height: 326px;
-    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px; /* Limit image width */
+    height: auto;
     border-radius: 8px;
-    /* Shadow/8px */
     box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.40);
 }
 
@@ -21,7 +25,8 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
-    flex: 1 0 0;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .contone {
@@ -29,19 +34,18 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    align-self: stretch;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .contone1 {
-    align-self: stretch;
     color: var(--Neutral-Grey, #717171);
-    /* Body/Medium/Body 2 */
     font-family: Inter;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
     line-height: 24px;
-    /* 150% */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .contone2 {
@@ -49,31 +53,45 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    align-self: stretch;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .contone21 {
-    align-self: stretch;
     color: var(--Brand-Primary, #4CAF4F);
-
-    /* Heading/Headline 4 */
     font-family: Inter;
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
     line-height: 28px;
-    /* 140% */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .contone22 {
-    align-self: stretch;
     color: var(--Neutral-L_Grey, #89939E);
-
-    /* Body/Regular/Body 2 */
     font-family: Inter;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    /* 150% */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Media query for tablets and larger screens */
+@media screen and (min-width: 768px) {
+    .customer {
+        flex-direction: row;
+        align-items: center;
+        padding: 32px 144px;
+        gap: 78px;
+    }
+
+    .custimg {
+        max-width: 300px;
+    }
+
+    .custcontent {
+        flex: 1;
+        max-width: calc(100% - 300px - 78px); /* Ensure content fits within remaining space */
+    }
 }

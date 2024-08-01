@@ -30,16 +30,12 @@ svg {
     fill: currentColor;
     /* Inherit the current text color */
 }
-
-
-
-
-
-
 .body {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 48px;
+    max-width: 100%;
+    box-sizing: border-box;
 }

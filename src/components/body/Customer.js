@@ -16,8 +16,6 @@ const Customer = () => {
             <div className='contone22'>British Dragon Boat Racing Association</div>
           </div>
         </div>
-        <div></div>
-
       </div>
 
     </div>
