@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 661px; /* Limit max width */
+    /* Limit max width */
     gap: 32px; /* Space between child elements */
 }
 
@@ -43,7 +43,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 601px; /* Limit max width */
     gap: 16px; /* Space between text elements */
 }
 
@@ -86,14 +85,6 @@
     .unlock {
         flex-direction: row;
         padding: 0 64px; /* Adjust padding for medium screens */
-    }
-
-    .unlock1 {
-        max-width: 442px; /* Maintain max width */
-    }
-
-    .unlock2 {
-        max-width: 661px; /* Maintain max width */
     }
 }
 
